@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0B2A1D">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>TAMS Model United Nations</title>
+<meta name="description" content="TAMS Model United Nations. A one-day high school Model UN conference at the University of North Texas in Denton on Saturday, September 26, 2026.">
+<meta property="og:title" content="TAMS Model United Nations, September 26, 2026">
+<meta property="og:description" content="A one-day high school Model UN conference at the University of North Texas in Denton. Four committees, 8:00 AM to 6:00 PM.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tamsmun.org/">
+<meta property="og:image" content="https://tamsmun.org/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --forest: #1A5C3A;
+    --dark: #0B2A1D;
+    --white: #FFFFFF;
+
+    --bg: #F8FBF9;
+    --ink: var(--dark);
+    --muted: rgba(11, 42, 29, 0.68);
+    --tint: rgba(26, 92, 58, 0.07);
+    --tint-2: rgba(26, 92, 58, 0.13);
+    --accent: var(--forest);
+    --focus: var(--forest);
+    --card: var(--dark);
+    --card-alt: var(--forest);
+    --on-card: var(--white);
+    --on-card-muted: rgba(255, 255, 255, 0.74);
+    --panel: var(--white);
+    --footer: var(--dark);
+    --nav-solid: var(--dark);
+    --btn-bg: var(--forest);
+    --btn-fg: var(--white);
+    --btn-hover-bg: var(--dark);
+    --btn-hover-fg: var(--white);
+
+    --hero-image: url("hero.jpg");
+
+    --display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+    --body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+
+    --t-sm: 15px;
+    --t-md: 17px;
+    --t-lg: 19px;
+    --s1: 8px; --s2: 16px; --s3: 24px; --s4: 32px; --s5: 48px; --s6: 64px; --s7: 96px;
+
+    --max: 1120px;
+    --gutter: 24px;
+    --radius: 22px;
+    --radius-sm: 14px;
+    --nav-h: 72px;
+    --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+    interpolate-size: allow-keywords;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0B2A1D;
+      --ink: rgba(255, 255, 255, 0.94);
+      --muted: rgba(255, 255, 255, 0.7);
+      --tint: rgba(255, 255, 255, 0.06);
+      --tint-2: rgba(255, 255, 255, 0.14);
+      --accent: rgba(255, 255, 255, 0.9);
+      --focus: var(--white);
+      --card: #1A5C3A;
+      --card-alt: rgba(26, 92, 58, 0.55);
+      --panel: rgba(255, 255, 255, 0.06);
+      --footer: rgba(255, 255, 255, 0.04);
+      --nav-solid: #0B2A1D;
+      --btn-bg: var(--white);
+      --btn-fg: var(--dark);
+      --btn-hover-bg: rgba(255, 255, 255, 0.85);
+      --btn-hover-fg: var(--dark);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0B2A1D;
+    --ink: rgba(255, 255, 255, 0.94);
+    --muted: rgba(255, 255, 255, 0.7);
+    --tint: rgba(255, 255, 255, 0.06);
+    --tint-2: rgba(255, 255, 255, 0.14);
+    --accent: rgba(255, 255, 255, 0.9);
+    --focus: var(--white);
+    --card: #1A5C3A;
+    --card-alt: rgba(26, 92, 58, 0.55);
+    --panel: rgba(255, 255, 255, 0.06);
+    --footer: rgba(255, 255, 255, 0.04);
+    --nav-solid: #0B2A1D;
+    --btn-bg: var(--white);
+    --btn-fg: var(--dark);
+    --btn-hover-bg: rgba(255, 255, 255, 0.85);
+    --btn-hover-fg: var(--dark);
+  }
+
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  img { max-width: 100%; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 12px); color-scheme: light dark; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: var(--t-md);
+    line-height: 1.6;
+  }
+  a { color: inherit; }
+  p { margin: 0; }
+  h1, h2, h3 { margin: 0; font-weight: 500; }
+  h2 { font-family: var(--display); font-size: clamp(32px, 4.6vw, 52px); line-height: 1.05; letter-spacing: -0.01em; text-wrap: balance; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+  .nav :focus-visible, .hero :focus-visible, .footer :focus-visible, .card :focus-visible { outline-color: var(--white); }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+  .skip { position: absolute; left: 16px; top: -60px; background: var(--white); color: var(--dark); padding: 10px 14px; border-radius: var(--radius-sm); z-index: 100; text-decoration: none; font-weight: 600; }
+  .skip:focus { top: 12px; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    color: var(--white);
+    background: transparent;
+    transition: background-color .35s ease;
+  }
+  .nav.is-solid, .nav.menu-open { background: var(--nav-solid); }
+  .nav .wrap { display: flex; align-items: center; justify-content: flex-start; height: var(--nav-h); gap: var(--s3); }
+  .brand { font-family: var(--display); font-size: 24px; text-decoration: none; letter-spacing: 0.02em; line-height: 1; margin-right: auto; }
+  .nav-toggle { display: none; background: transparent; border: 0; color: var(--white); padding: 0 var(--s2); min-height: 44px; border-radius: var(--radius-sm); font: inherit; font-size: var(--t-sm); font-weight: 600; cursor: pointer; }
+  .nav-links { display: flex; align-items: center; gap: 30px; list-style: none; margin: 0; padding: 0; }
+  .nav-links a { font-size: var(--t-sm); font-weight: 500; text-decoration: none; opacity: 0.72; padding: var(--s1) 0; transition: opacity .2s ease; }
+  .nav-links a:hover, .nav-links a.is-current { opacity: 1; }
+  .nav-links .nav-register { display: none; }
+  .nav-links .nav-register a { background: var(--white); color: var(--dark); padding: 10px 18px; border-radius: var(--radius-sm); opacity: 1; font-weight: 600; }
+  @media (max-width: 860px) {
+    .nav-toggle { display: inline-flex; align-items: center; }
+    .nav-links { display: none; position: absolute; left: 0; right: 0; top: var(--nav-h); background: var(--nav-solid); flex-direction: column; align-items: stretch; gap: 0; padding: var(--s1) 0 var(--s2); border-radius: 0 0 var(--radius) var(--radius); }
+    .nav-links.open { display: flex; }
+    .nav-links li a { display: block; padding: 14px var(--gutter); font-size: var(--t-md); }
+    .nav-links .nav-register a { margin: var(--s1) var(--gutter) 0; text-align: center; }
+  }
+
+  .hero {
+    position: relative; overflow: hidden;
+    min-height: 100vh; min-height: 100svh;
+    display: grid; place-items: center;
+    padding: calc(var(--nav-h) + var(--s4)) var(--gutter) clamp(72px, 10vh, 96px);
+    color: var(--white);
+    background: var(--dark);
+    text-align: center;
+  }
+  .hero-bg {
+    position: absolute; inset: -12% 0; z-index: 0;
+    background-color: var(--dark);
+    background-image: var(--hero-image);
+    background-size: cover; background-position: center 40%;
+    will-change: transform;
+  }
+  .hero-bg::before { content: ""; position: absolute; inset: 0; background: rgba(11, 42, 29, 0.5); mix-blend-mode: multiply; }
+  .hero-bg::after { content: ""; position: absolute; inset: 0; background: rgba(11, 42, 29, 0.12); }
+  .hero-bg.no-image { background-image: linear-gradient(180deg, #1A5C3A 0%, #0B2A1D 70%); }
+  .hero-bg.no-image::before, .hero-bg.no-image::after { background: none; }
+  .hero::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 40%; z-index: 1; pointer-events: none; background: linear-gradient(180deg, rgba(11,42,29,0.55) 0%, rgba(11,42,29,0) 100%); }
+  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 55%; z-index: 1; pointer-events: none; background: linear-gradient(180deg, rgba(11,42,29,0) 0%, rgba(11,42,29,0.45) 50%, #0B2A1D 100%); }
+  .hero-content { position: relative; z-index: 2; display: grid; justify-items: center; max-width: 1040px; }
+  .hero-content > * { opacity: 0; animation: fade .7s ease .05s forwards; }
+  @keyframes fade { to { opacity: 1; } }
+  .hero h1 {
+    font-family: var(--display); font-weight: 500;
+    font-size: clamp(44px, 8.2vw, 108px);
+    line-height: 0.98; letter-spacing: 0.035em; text-transform: uppercase;
+    text-wrap: balance; max-width: 16ch; margin: 0;
+  }
+  .cd { display: flex; justify-content: center; gap: clamp(20px, 5vw, 56px); margin-top: clamp(40px, 6vh, 64px); }
+  .cd-unit { display: flex; flex-direction: column; align-items: center; }
+  .cd-num {
+    font-family: var(--body); font-weight: 400;
+    font-size: clamp(30px, 4.2vw, 58px); line-height: 1; letter-spacing: -0.01em;
+    font-variant-numeric: tabular-nums; min-width: 2ch; text-align: center;
+  }
+  .cd-label { margin-top: var(--s1); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.62); font-weight: 500; }
+  .cd-num.tick { animation: tick .18s ease-out; }
+  @keyframes tick { from { opacity: .4; } }
+  .cd-done { margin-top: var(--s5); font-family: var(--display); font-size: clamp(24px, 3.4vw, 36px); }
+  .hero-btn { margin-top: var(--s4); background: var(--white); color: var(--dark); }
+  .hero-btn:hover { background: rgba(255,255,255,0.86); color: var(--dark); }
+
+  @media (max-height: 780px) and (min-width: 561px) {
+    .hero { padding-top: calc(var(--nav-h) + var(--s2)); padding-bottom: var(--s6); }
+    .cd { margin-top: var(--s4); }
+  }
+  @media (max-width: 560px) {
+    .cd { gap: 14px; margin-top: var(--s4); }
+    .cd-num { font-size: 36px; }
+    .cd-label { font-size: 10px; letter-spacing: 0.14em; margin-top: 6px; }
+  }
+
+  .section { padding: clamp(56px, 8vw, 96px) 0; }
+  .section-head { display: grid; gap: var(--s2); max-width: 64ch; margin-bottom: var(--s5); }
+  .section-head .lede { font-size: var(--t-lg); color: var(--muted); max-width: 58ch; text-wrap: pretty; }
+  .prose { max-width: 66ch; display: grid; gap: 20px; text-wrap: pretty; }
+  .prose p { font-size: 18px; }
+  .split .wrap { display: grid; grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.6fr); gap: var(--s6); }
+  .side { position: sticky; top: calc(var(--nav-h) + var(--s3)); align-self: start; display: grid; gap: 12px; }
+  .side .from { font-size: var(--t-sm); color: var(--muted); }
+  @media (max-width: 860px) { .split .wrap { grid-template-columns: 1fr; gap: var(--s3); } .side { position: static; } }
+
+  .prose .salute { font-family: var(--display); font-size: 22px; font-style: italic; color: var(--muted); }
+  .sig { margin-top: 12px; display: grid; gap: 2px; }
+  .sig .name { font-family: var(--display); font-size: 24px; }
+  .sig .role { font-size: var(--t-sm); color: var(--muted); }
+
+  .letter { background: #0B2A1D; color: var(--white); --muted: rgba(255,255,255,0.7); --focus: var(--white); padding-top: clamp(24px, 4vw, 48px); padding-bottom: calc(clamp(56px, 8vw, 96px) + 44px); }
+  .letter .side h2 { color: var(--white); }
+
+  .committees { background: var(--bg); position: relative; z-index: 1; margin-top: -44px; border-radius: 44px 44px 0 0; }
+  .committees::before { content: ""; position: absolute; inset: 0; background: var(--tint); border-radius: inherit; pointer-events: none; }
+  .committees .wrap { position: relative; }
+  .cgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3); }
+  .card {
+    background: var(--card); color: var(--on-card);
+    border-radius: var(--radius);
+    padding: var(--s4); min-width: 0;
+    display: grid; gap: 12px; align-content: start;
+  }
+  .card.alt { background: var(--card-alt); }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+  .code { font-family: var(--display); font-size: clamp(38px, 4vw, 52px); line-height: 0.95; letter-spacing: 0.03em; text-transform: uppercase; }
+  .card h3 { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--on-card-muted); }
+  .topic { font-family: var(--display); font-size: clamp(22px, 2.2vw, 26px); line-height: 1.25; text-wrap: pretty; overflow-wrap: anywhere; }
+  .topic .t-label { display: block; font-family: var(--body); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--on-card-muted); margin-bottom: 8px; font-weight: 600; }
+  .pmeta { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; margin: 0; padding-top: 12px; font-size: 14px; }
+  .pmeta dt { color: var(--on-card-muted); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+  .pmeta dd { margin: 2px 0 0; }
+  .pmeta .soon { color: var(--on-card-muted); font-style: italic; }
+  @media (max-width: 760px) { .cgrid { grid-template-columns: 1fr; } .card { padding: var(--s3); } }
+  @media (max-width: 420px) { .pmeta { grid-template-columns: 1fr; } .code { font-size: 36px; } }
+
+  .schedule .wrap { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.35fr); gap: var(--s6); align-items: start; }
+  .sched-notes { display: grid; gap: 14px; margin-top: var(--s1); font-size: var(--t-sm); color: var(--muted); max-width: 44ch; text-wrap: pretty; }
+  .timeline { --dot: 12px; --track: 4px; position: relative; list-style: none; margin: 0; padding: 0 0 0 40px; }
+  .timeline::before, .timeline::after { content: ""; position: absolute; left: calc(var(--dot) / 2 - var(--track) / 2); top: 12px; bottom: 12px; width: var(--track); border-radius: var(--track); }
+  .timeline::before { background: var(--tint-2); }
+  .timeline::after { background: var(--accent); transform: scaleY(var(--fill, 0)); transform-origin: top; }
+  .timeline li { position: relative; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: var(--s2); padding: 12px 0; align-items: baseline; }
+  .timeline li::before { content: ""; position: absolute; left: -40px; top: 20px; width: var(--dot); height: var(--dot); border-radius: 50%; background: var(--tint-2); transition: background-color .4s ease; }
+  .timeline li.is-past::before { background: var(--accent); }
+  .timeline li.session { background: var(--tint); border-radius: var(--radius-sm); padding: 16px 18px; margin: 4px 0; }
+  .timeline li.session::before { top: 24px; }
+  .timeline .t { font-variant-numeric: tabular-nums; font-weight: 600; font-size: var(--t-sm); white-space: nowrap; min-width: 70px; text-align: right; }
+  .timeline li.session .t { color: var(--accent); }
+  .timeline .what { font-size: var(--t-md); }
+  .timeline li.session .what { font-family: var(--display); font-size: 22px; line-height: 1.2; font-weight: 500; }
+  .timeline .what .sub { display: block; font-family: var(--body); font-size: var(--t-sm); color: var(--muted); margin-top: 4px; }
+  @media (max-width: 860px) { .schedule .wrap { grid-template-columns: 1fr; gap: var(--s4); } }
+  @media (max-width: 480px) { .timeline { padding-left: 32px; } .timeline li::before { left: -32px; } .timeline li { gap: 12px; } .timeline .t { min-width: 0; } }
+
+  .register { background: var(--tint); }
+  .rgrid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: var(--s5); align-items: start; }
+  .panel { background: var(--panel); border-radius: var(--radius); padding: var(--s4); display: grid; gap: var(--s2); align-content: start; }
+  .panel h3, .plain h3 { font-family: var(--display); font-size: 28px; line-height: 1.1; }
+  .panel p, .plain p { color: var(--muted); font-size: var(--t-sm); max-width: 46ch; text-wrap: pretty; }
+  .status { font-size: 13px; font-weight: 600; color: var(--accent); }
+  .plain { display: grid; gap: var(--s2); padding: var(--s2) 0; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 22px; border-radius: var(--radius-sm); background: var(--btn-bg); color: var(--btn-fg); font-weight: 600; font-size: var(--t-sm); text-decoration: none; justify-self: start; transition: transform .2s var(--ease), background-color .2s ease, color .2s ease; }
+  .btn:hover { background: var(--btn-hover-bg); color: var(--btn-hover-fg); }
+  .btn:active { transform: translateY(1px); }
+  .btn[hidden] { display: none; }
+  .plain .link { font-weight: 600; color: var(--accent); text-underline-offset: 4px; }
+  @media (max-width: 760px) { .rgrid { grid-template-columns: 1fr; gap: var(--s3); } .panel { padding: var(--s3); } }
+
+  .faq { background: var(--tint); }
+  .faq-list { display: grid; gap: var(--s1); }
+  .faq details { background: var(--panel); border-radius: var(--radius-sm); transition: background-color .25s ease; }
+  .faq details:hover, .faq details[open] { background: var(--tint-2); }
+  .faq summary { list-style: none; cursor: pointer; padding: var(--s2) var(--s3); display: flex; justify-content: space-between; align-items: center; gap: 20px; font-size: var(--t-md); font-weight: 500; border-radius: var(--radius-sm); }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary h3 { font: inherit; margin: 0; }
+  .faq summary .mark { flex: none; width: 16px; height: 16px; position: relative; }
+  .faq summary .mark::before, .faq summary .mark::after { content: ""; position: absolute; background: currentColor; border-radius: 2px; }
+  .faq summary .mark::before { left: 0; right: 0; top: 7px; height: 2px; }
+  .faq summary .mark::after { top: 0; bottom: 0; left: 7px; width: 2px; transition: transform .25s var(--ease); }
+  .faq details[open] summary .mark::after { transform: scaleY(0); }
+  .faq details::details-content { block-size: 0; overflow: hidden; transition: block-size .35s var(--ease), content-visibility .35s allow-discrete; }
+  .faq details[open]::details-content { block-size: auto; }
+  .faq .a { padding: 0 var(--s3) var(--s3); color: var(--muted); max-width: 64ch; font-size: var(--t-sm); text-wrap: pretty; }
+  .faq .a a { color: var(--ink); }
+
+  .footer { background: var(--footer); color: rgba(255,255,255,0.78); padding: var(--s6) 0 var(--s4); }
+  .footer .wrap { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: var(--s5); }
+  .footer .brand { color: var(--white); }
+  .footer .date { font-size: var(--t-sm); margin-top: 12px; }
+  .footer address { font-style: normal; margin-top: var(--s2); font-size: var(--t-sm); line-height: 1.6; }
+  .footer .contact { margin-top: 12px; font-size: var(--t-sm); }
+  .footer h3 { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.55); margin-bottom: 12px; }
+  .footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: var(--t-sm); }
+  .footer a { text-decoration: none; }
+  .footer a:hover { color: var(--white); text-decoration: underline; text-underline-offset: 4px; }
+  .footer .legal { grid-column: 1 / -1; margin-top: var(--s4); font-size: 13px; color: rgba(255,255,255,0.5); display: flex; gap: var(--s1) var(--s3); flex-wrap: wrap; }
+  @media (max-width: 560px) { .footer .wrap { grid-template-columns: 1fr; gap: var(--s4); } }
+
+  .will-reveal { opacity: 0; transform: translateY(40px) scale(0.96); }
+  .will-reveal.is-in { opacity: 1; transform: none; transition: opacity .6s ease, transform .8s var(--ease); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .hero-content > * { animation: none; opacity: 1; }
+    .cd-num.tick { animation: none; }
+    .will-reveal { opacity: 1; transform: none; }
+    .faq summary .mark::after, .btn, .timeline li::before, .nav, .faq details, .faq details::details-content { transition: none; }
+  }
+
+  @media print {
+    :root, :root[data-theme="dark"] { color-scheme: light; --bg: #fff; --ink: #000; --muted: #444; --tint: transparent; --tint-2: #bbb; --accent: #000; --card: #fff; --card-alt: #fff; --on-card: #000; --on-card-muted: #333; --panel: #fff; --footer: #fff; }
+    .nav, .cd, .hero-btn { display: none !important; }
+    .hero { min-height: 0; padding: 40px 0; background: none; color: #000; }
+    .hero-bg, .hero::before, .hero::after { display: none; }
+    .letter { background: none; color: #000; --muted: #444; padding: 24px 0; }
+    .letter .side h2 { color: #000; }
+    .committees { margin-top: 0; border-radius: 0; }
+    .hero h1 { font-size: 40px; }
+    .card, .card.alt { border: 1px solid #999; }
+    .footer, .footer .brand, .footer .date, .footer .legal { color: #000; }
+    .footer h3 { color: #333; }
+    .section { padding: 24px 0; }
+    .will-reveal { opacity: 1; transform: none; }
+    .faq details::details-content { block-size: auto; }
+  }
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#page">TAMSMUN</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#letter">Letter</a></li>
+        <li><a href="#committees">Committees</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#registration">Registration</a></li>
+        <li><a href="#about">About TAMS</a></li>
+        <li><a href="#faq">Questions</a></li>
+        <li class="nav-register" id="navRegister"><a href="#registration" id="navRegisterLink">Register</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="page" aria-labelledby="heroTitle">
+    <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+    <div class="hero-content" id="heroContent">
+      <h1 id="heroTitle">TAMS Model United Nations</h1>
+      <div class="cd" id="cd" aria-hidden="true">
+        <div class="cd-unit"><span class="cd-num" id="cdD">--</span><span class="cd-label">Days</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cdH">--</span><span class="cd-label">Hours</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cdM">--</span><span class="cd-label">Minutes</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cdS">--</span><span class="cd-label">Seconds</span></div>
+      </div>
+      <p class="sr-only" id="cdText"></p>
+      <a class="btn hero-btn" id="heroBtn" href="#registration" hidden>Register</a>
+    </div>
+  </section>
+
+  <section class="section split letter" id="letter" aria-labelledby="letterTitle">
+    <div class="wrap">
+      <div class="side">
+        <h2 id="letterTitle">Letter from the Secretary General</h2>
+        <p class="from">Fall 2026</p>
+      </div>
+      <div class="prose">
+        <p class="salute">Dear delegates and advisors,</p>
+        <p>On behalf of the Secretariat, it is our pleasure to invite you to TAMS Model United Nations. On Saturday, September 26, the Texas Academy of Mathematics and Science will welcome high school delegates to the University of North Texas campus in Denton for a full day of debate, negotiation, and resolution writing.</p>
+        <p>TAMSMUN is deliberately compact. Four committees, one day, and a staff of student chairs who run the rooms, run crisis, and keep the day on schedule. That scale is the point. Smaller rooms mean more time on the speakers' list, more chances to build a bloc, and closer attention from your dais than a delegate can expect at a conference of two thousand.</p>
+        <p>This session's agenda spans the range of what Model UN can be. The World Health Organization takes up the illicit trade in human organs. DISEC confronts weapons of mass destruction in the hands of non-state actors. The General Assembly debates censorship and mass surveillance in the digital age. And our crisis committee returns to 1991, where delegates will manage the final months of the Soviet Union from inside the room where it came apart.</p>
+        <p>Whether this is your first conference or your fifteenth, we have built a committee for you. Background guides will follow once registration opens, and we will keep this page current as details are confirmed.</p>
+        <p>We look forward to seeing you in Denton this September.</p>
+        <div class="sig">
+          <span class="name" id="sigName">Secretary General</span>
+          <span class="role" id="sigRole">TAMS Model United Nations, Fall 2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section committees" id="committees" aria-labelledby="commTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="commTitle">Committees</h2>
+        <p class="lede">Three General Assembly-style committees and one continuous crisis. Each committee debates a single topic for the full day. Background guides will be published with registration.</p>
+      </div>
+      <div class="cgrid">
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <div class="code" aria-hidden="true">WHO</div>
+          </div>
+          <h3>World Health Organization</h3>
+          <p class="topic"><span class="t-label">Topic</span>Addressing the Global Black Market Trade in Human Organs and Prevention of Organ Trafficking</p>
+          <dl class="pmeta">
+            <div><dt>Format</dt><dd>GA procedure, member states</dd></div>
+            <div><dt>Background guide</dt><dd class="soon">Coming soon</dd></div>
+          </dl>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <div class="code" aria-hidden="true">DISEC</div>
+          </div>
+          <h3>Disarmament and International Security Committee</h3>
+          <p class="topic"><span class="t-label">Topic</span>Preventing the Acquisition and Use of Weapons of Mass Destruction by Non-State Actors and Terrorist Organizations</p>
+          <dl class="pmeta">
+            <div><dt>Format</dt><dd>GA First Committee, member states</dd></div>
+            <div><dt>Background guide</dt><dd class="soon">Coming soon</dd></div>
+          </dl>
+        </article>
+        <article class="card" data-reveal>
+          <div class="card-top">
+            <div class="code" aria-hidden="true">GA</div>
+          </div>
+          <h3>General Assembly</h3>
+          <p class="topic"><span class="t-label">Topic</span>Addressing the Global Rise of Censorship and Mass Surveillance</p>
+          <dl class="pmeta">
+            <div><dt>Format</dt><dd>GA plenary, member states</dd></div>
+            <div><dt>Background guide</dt><dd class="soon">Coming soon</dd></div>
+          </dl>
+        </article>
+        <article class="card alt" data-reveal>
+          <div class="card-top">
+            <div class="code" aria-hidden="true">Crisis</div>
+          </div>
+          <h3>Crisis Committee, Moscow 1991</h3>
+          <p class="topic"><span class="t-label">Topic</span>The Dissolution of the Soviet Union: Managing Political Instability and the Collapse of the USSR</p>
+          <dl class="pmeta">
+            <div><dt>Format</dt><dd>Continuous crisis, individual portfolios</dd></div>
+            <div><dt>Background guide</dt><dd class="soon">Coming soon</dd></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section schedule" id="schedule" aria-labelledby="schedTitle">
+    <div class="wrap">
+      <div>
+        <div class="section-head">
+          <h2 id="schedTitle">Schedule</h2>
+          <p class="lede">Three committee sessions with a lunch break, plus opening and closing ceremonies. Doors open at 8:00 AM and the day ends at 6:00 PM. Times are tentative.</p>
+        </div>
+        <div class="sched-notes">
+          <p>Please be there at 8:00 AM. Check-in runs until 8:45, when the opening ceremony starts.</p>
+          <p>The session notes are for the GA-style committees. Crisis runs continuously all day.</p>
+          <p>Lunch details to come.</p>
+        </div>
+      </div>
+      <ol class="timeline" id="timeline">
+        <li><span class="t">8:00 AM</span><span class="what">Check-in<span class="sub">Pick up your placard and badge</span></span></li>
+        <li><span class="t">8:45 AM</span><span class="what">Opening ceremony</span></li>
+        <li class="session"><span class="t">9:30 AM</span><span class="what">Committee session one<span class="sub">Roll call and opening speeches</span></span></li>
+        <li><span class="t">12:00 PM</span><span class="what">Lunch</span></li>
+        <li class="session"><span class="t">1:00 PM</span><span class="what">Committee session two<span class="sub">Caucusing and working papers</span></span></li>
+        <li><span class="t">3:15 PM</span><span class="what">Break</span></li>
+        <li class="session"><span class="t">3:30 PM</span><span class="what">Committee session three<span class="sub">Draft resolutions, amendments, and voting</span></span></li>
+        <li><span class="t">5:30 PM</span><span class="what">Closing ceremony and awards</span></li>
+        <li><span class="t">6:00 PM</span><span class="what">Conference ends</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section register" id="registration" aria-labelledby="regTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="regTitle">Registration</h2>
+        <p class="lede" id="regLede">We're still putting both forms together. Once they're live we'll link them here.</p>
+      </div>
+      <div class="rgrid">
+        <div class="panel" data-reveal>
+          <span class="status" id="regStatus">Opens soon</span>
+          <h3>Delegates</h3>
+          <p>Open to all high school students and their advisors. When registration opens we'll post fees, deadlines, delegation size limits, and how to send us your committee preferences (plus country preferences for the GA-style committees).</p>
+          <a class="btn" id="regBtn" href="#registration" hidden>Register as a delegate</a>
+        </div>
+        <div class="plain">
+          <span class="status" id="chairStatus">Opens soon</span>
+          <h3>Chairs</h3>
+          <p>Open to everyone. Chairs and crisis staff run the committee rooms. The application asks about your MUN experience, which committees you'd like, and whether you can make training before the conference.</p>
+          <a class="link" id="chairBtn" href="#registration" hidden>Apply to chair</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section split about" id="about" aria-labelledby="aboutTitle">
+    <div class="wrap">
+      <div class="side"><h2 id="aboutTitle">About TAMS</h2></div>
+      <div class="prose">
+        <p>TAMS is a residential early-college program at the University of North Texas in Denton, just north of Dallas-Fort Worth. It started in 1987 as the first program of its kind in the country. Students spend their last two years of high school taking regular UNT classes alongside undergrads.</p>
+        <p>TAMS students organize TAMSMUN. It brings other high schoolers onto the UNT campus for a day.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section split faq" id="faq" aria-labelledby="faqTitle">
+    <div class="wrap">
+      <div class="side">
+        <h2 id="faqTitle">Questions</h2>
+        <p class="from">A few things people ask.</p>
+      </div>
+      <div class="faq-list">
+        <details name="faq">
+          <summary><h3>Do I need Model UN experience?</h3><span class="mark" aria-hidden="true"></span></summary>
+          <div class="a">No. WHO and the General Assembly are meant for first-time and newer delegates, and the chairs will explain procedure as you go. DISEC is better if you've done a conference or two. Crisis is for experienced delegates who already know how directives and crisis updates work.</div>
+        </details>
+        <details name="faq">
+          <summary><h3>What should I wear?</h3><span class="mark" aria-hidden="true"></span></summary>
+          <div class="a">Western business attire: suits, blazers, dress shirts, slacks, skirts, or dresses. Wear comfortable shoes, since it's a ten-hour day.</div>
+        </details>
+        <details name="faq">
+          <summary><h3>Are position papers required?</h3><span class="mark" aria-hidden="true"></span></summary>
+          <div class="a">Each committee's background guide will say whether one is required. Either way, plan on writing one for your committee's topic, since it's the best way to prep.</div>
+        </details>
+        <details name="faq">
+          <summary><h3>How are committee and country assignments made?</h3><span class="mark" aria-hidden="true"></span></summary>
+          <div class="a">You'll give us your committee preferences on the registration form, plus country preferences for WHO, DISEC, and the GA (in Crisis you represent a person, not a country). We assign in the order forms come in, so the earlier you sign up, the better your chance at your first choice.</div>
+        </details>
+        <details name="faq">
+          <summary><h3>How do I apply to chair?</h3><span class="mark" aria-hidden="true"></span></summary>
+          <div class="a">Anyone can apply. Chair applications aren't open yet. When they are, the form will be in the <a href="#registration">Registration section</a> above. Chairs come to training before the conference and help write their committee's background guide with the Secretariat.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#page">TAMSMUN</a>
+      <p class="date">Saturday, September 26, 2026</p>
+      <address>Texas Academy of Mathematics and Science<br>University of North Texas<br>Denton, Texas</address>
+      <p class="contact" id="contactLine" hidden></p>
+    </div>
+    <nav aria-label="Footer">
+      <h3>On this page</h3>
+      <ul>
+        <li><a href="#letter">Letter from the Secretary General</a></li>
+        <li><a href="#committees">Committees</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#registration" id="footerReg">Registration (opens soon)</a></li>
+        <li><a href="#about">About TAMS</a></li>
+        <li><a href="#faq">Questions</a></li>
+        <li id="socialItem" hidden><a href="#contact" id="socialLink" rel="noopener">Instagram</a></li>
+      </ul>
+    </nav>
+    <div class="legal">
+      <span>&copy; 2026 TAMS Model United Nations, a student-run conference.</span>
+      <span>Not affiliated with the United Nations.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Fill these in as details are confirmed. Empty strings keep the "opens soon" copy.
+  var CONFIG = {
+    heroImage: "",           // URL or data URI of the hero background photo
+    contactEmail: "",        // the Secretariat's email address
+    instagram: "",           // Instagram handle without the @
+    secretaryGeneral: "",    // name that signs the letter
+    registrationUrl: "",     // delegate registration form link, once live
+    chairUrl: ""             // chair application form link, once live
+  };
+
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var $ = function (id) { return document.getElementById(id); };
+
+    if (CONFIG.heroImage) {
+      var bg = $("heroBg");
+      bg.style.backgroundImage = "url(" + JSON.stringify(CONFIG.heroImage) + ")";
+      bg.classList.remove("no-image");
+    }
+
+    if (CONFIG.secretaryGeneral) {
+      $("sigName").textContent = CONFIG.secretaryGeneral;
+      $("sigRole").textContent = "Secretary General, TAMS Model United Nations, Fall 2026";
+    }
+
+    var regOpen = !!CONFIG.registrationUrl, chairOpen = !!CONFIG.chairUrl;
+
+    if (CONFIG.contactEmail) {
+      var c = $("contactLine");
+      var ca = document.createElement("a");
+      ca.href = "mailto:" + CONFIG.contactEmail;
+      ca.textContent = CONFIG.contactEmail;
+      c.appendChild(ca);
+      c.hidden = false;
+    }
+    if (CONFIG.instagram) {
+      var handle = CONFIG.instagram.replace(/^@/, "");
+      var s = $("socialLink");
+      s.href = "https://instagram.com/" + encodeURIComponent(handle);
+      s.textContent = "@" + handle + " on Instagram";
+      s.target = "_blank";
+      $("socialItem").hidden = false;
+    }
+    function live(btnId, statusId, url) {
+      if (!url) return;
+      var b = $(btnId);
+      b.href = url; b.target = "_blank"; b.rel = "noopener"; b.hidden = false;
+      $(statusId).textContent = "Open now";
+    }
+    live("regBtn", "regStatus", CONFIG.registrationUrl);
+    live("chairBtn", "chairStatus", CONFIG.chairUrl);
+    if (regOpen || chairOpen) {
+      $("regLede").textContent = regOpen && chairOpen ? "Both forms are open."
+        : regOpen ? "Delegate registration is open. Chair applications open soon."
+        : "Chair applications are open. Delegate registration opens soon.";
+      var hb = $("heroBtn");
+      hb.hidden = false;
+      hb.href = regOpen ? CONFIG.registrationUrl : CONFIG.chairUrl;
+      hb.textContent = regOpen ? "Register" : "Apply to chair";
+      hb.target = "_blank"; hb.rel = "noopener";
+    }
+    if (regOpen) {
+      $("navRegister").style.display = "block";
+      var nl = $("navRegisterLink");
+      nl.href = CONFIG.registrationUrl; nl.target = "_blank"; nl.rel = "noopener";
+      $("footerReg").textContent = "Registration";
+    }
+
+    // Countdown to doors opening, 8:00 AM Central, September 26, 2026
+    var start = Date.parse("2026-09-26T08:00:00-05:00");
+    var end = Date.parse("2026-09-26T18:00:00-05:00");
+    var cd = $("cd"), cdText = $("cdText");
+    var el = { d: $("cdD"), h: $("cdH"), m: $("cdM"), s: $("cdS") };
+    var done = false, described = false, lastTick = 0;
+    function pad(n) { return n < 10 ? "0" + n : String(n); }
+    function plural(n, w) { return n + " " + w + (n === 1 ? "" : "s"); }
+    function set(node, v, quiet) {
+      if (node.textContent === v) return;
+      node.textContent = v;
+      if (!quiet && !reduce) { node.classList.remove("tick"); void node.offsetWidth; node.classList.add("tick"); }
+    }
+    function finish(text) {
+      if (done) return;
+      done = true;
+      var p = document.createElement("p");
+      p.className = "cd-done";
+      p.textContent = text;
+      cd.replaceWith(p);
+      cdText.textContent = text;
+    }
+    function tick() {
+      var now = Date.now();
+      if (now >= end) { finish("The conference is over. Thanks for coming."); return; }
+      if (now >= start) { finish("Today's the day. We wrap up at 6:00 PM."); return; }
+      var r = start - now;
+      var d = Math.floor(r / 864e5), h = Math.floor(r % 864e5 / 36e5), m = Math.floor(r % 36e5 / 6e4), s = Math.floor(r % 6e4 / 1e3);
+      var jump = now - lastTick > 2000;
+      lastTick = now;
+      set(el.d, pad(d), jump); set(el.h, pad(h), jump); set(el.m, pad(m), jump); set(el.s, pad(s), true);
+      if (!described) {
+        described = true;
+        cdText.textContent = "Doors open in " + plural(d, "day") + ", " + plural(h, "hour") + " and " + plural(m, "minute") + ".";
+      }
+    }
+    tick();
+    setTimeout(function () {
+      tick();
+      setInterval(function () { if (document.visibilityState === "visible") tick(); }, 1000);
+    }, 1000 - Date.now() % 1000);
+    document.addEventListener("visibilitychange", function () { if (document.visibilityState === "visible") tick(); });
+
+    // Nav: solid after the hero, current section, mobile menu
+    var nav = $("nav"), hero = $("page"), toggle = $("navToggle"), links = $("navLinks");
+    var heroBg = $("heroBg"), heroContent = $("heroContent"), timeline = $("timeline");
+    var tlItems = Array.prototype.slice.call(timeline.querySelectorAll("li"));
+    var navAnchors = Array.prototype.slice.call(links.querySelectorAll("li:not(.nav-register) a[href^='#']"));
+    var sections = navAnchors.map(function (a) { return document.querySelector(a.getAttribute("href")); })
+      .filter(function (sec, i, arr) { return sec && arr.indexOf(sec) === i; });
+
+    function closeMenu() {
+      links.classList.remove("open"); nav.classList.remove("menu-open");
+      toggle.setAttribute("aria-expanded", "false"); toggle.textContent = "Menu";
+    }
+    toggle.addEventListener("click", function () {
+      var open = links.classList.toggle("open");
+      nav.classList.toggle("menu-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.textContent = open ? "Close" : "Menu";
+      if (open) { var first = links.querySelector("a"); if (first) first.focus(); }
+    });
+    links.addEventListener("click", function (e) { if (e.target.tagName === "A") closeMenu(); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && links.classList.contains("open")) { closeMenu(); toggle.focus(); } });
+    document.addEventListener("click", function (e) { if (!e.target.closest(".nav")) closeMenu(); });
+    if (window.matchMedia) window.matchMedia("(min-width: 861px)").addEventListener("change", function (m) { if (m.matches) closeMenu(); });
+
+    var ticking = false;
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        ticking = false;
+        var y = window.scrollY || window.pageYOffset;
+        var hh = hero.offsetHeight;
+        nav.classList.toggle("is-solid", y > hh - 120);
+
+        if (!reduce && y < hh) {
+          heroBg.style.transform = "translateY(" + (y * 0.25).toFixed(1) + "px)";
+          heroContent.style.opacity = Math.max(0, 1 - y / (hh * 0.85)).toFixed(3);
+        }
+
+        var mid = y + window.innerHeight * 0.4, current = null;
+        for (var i = 0; i < sections.length; i++) { if (sections[i].offsetTop <= mid) current = sections[i]; }
+        navAnchors.forEach(function (a) { a.classList.toggle("is-current", !!current && a.getAttribute("href") === "#" + current.id); });
+
+        var r = timeline.getBoundingClientRect();
+        var line = window.innerHeight * 0.66;
+        timeline.style.setProperty("--fill", Math.min(1, Math.max(0, (line - r.top) / r.height)).toFixed(3));
+        tlItems.forEach(function (li) { li.classList.toggle("is-past", li.getBoundingClientRect().top + 22 < line); });
+      });
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    onScroll();
+
+    // Reveal the committee cards and the registration panel when they scroll in.
+    // Only elements below the fold at load get the effect, so nothing visible starts hidden.
+    if (!reduce && "IntersectionObserver" in window) {
+      var vh = window.innerHeight;
+      var below = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"))
+        .filter(function (t) { return t.getBoundingClientRect().top > vh * 0.9; });
+      below.forEach(function (t) { t.classList.add("will-reveal"); });
+      var io = new IntersectionObserver(function (entries) {
+        var k = 0;
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          en.target.style.transitionDelay = Math.min(k++ * 90, 360) + "ms";
+          en.target.classList.add("is-in");
+          io.unobserve(en.target);
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.1 });
+      below.forEach(function (t) { io.observe(t); });
+    }
+
+    window.addEventListener("beforeprint", function () {
+      document.querySelectorAll(".faq details").forEach(function (d) { d.dataset.was = d.open ? "1" : ""; d.open = true; });
+    });
+    window.addEventListener("afterprint", function () {
+      document.querySelectorAll(".faq details").forEach(function (d) { d.open = d.dataset.was === "1"; });
+    });
+  })();
+</script>
+</body>
+</html>
