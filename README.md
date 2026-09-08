@@ -5,9 +5,9 @@ Website for TAMSMUN, a one-day high school Model UN conference hosted by the Tex
 ## Files
 
 - `index.html` is the whole site: styles, markup, and script in one file. No build step.
-- `hero-campus.jpg` is the hero background photo (Denton County courthouse square).
+- `hero-campus.jpg` is the hero background photo (UNT campus, looking toward the Hurley clock tower). If you swap it, give the new file a new name, because browsers cache the photo for a year.
 - `favicon.svg` is the browser tab icon.
-- `vercel.json` sets clean URLs and long-lived caching for the photo.
+- `vercel.json` sets long-lived caching for the photo.
 
 ## Editing
 
