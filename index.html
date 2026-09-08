@@ -260,7 +260,7 @@
   @media (max-width: 480px) { .timeline { padding-left: 32px; } .timeline li::before { left: -32px; } .timeline li { gap: 12px; } .timeline .t { min-width: 0; } }
 
   .register { background: var(--tint); }
-  .rgrid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: var(--s5); align-items: start; }
+  .rgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3); align-items: start; }
   .panel { background: var(--panel); border-radius: var(--radius); padding: var(--s4); display: grid; gap: var(--s2); align-content: start; }
   .panel h3, .plain h3 { font-family: var(--display); font-size: 28px; line-height: 1.1; }
   .panel p, .plain p { color: var(--muted); font-size: var(--t-sm); max-width: 46ch; text-wrap: pretty; }
@@ -486,11 +486,11 @@
           <p>Open to all high school students and their advisors. When registration opens we'll post fees, deadlines, delegation size limits, and how to send us your committee preferences (plus country preferences for the GA-style committees).</p>
           <a class="btn" id="regBtn" href="#registration" hidden>Register as a delegate</a>
         </div>
-        <div class="plain">
+        <div class="panel" data-reveal>
           <span class="status" id="chairStatus">Opens soon</span>
           <h3>Chairs</h3>
           <p>Open to everyone. Chairs and crisis staff run the committee rooms. The application asks about your MUN experience, which committees you'd like, and whether you can make training before the conference.</p>
-          <a class="link" id="chairBtn" href="#registration" hidden>Apply to chair</a>
+          <a class="btn" id="chairBtn" href="#registration" hidden>Apply to chair</a>
         </div>
       </div>
     </div>
