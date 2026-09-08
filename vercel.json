@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/hero.jpg",
+      "source": "/hero-campus.jpg",
       "headers": [
         {
           "key": "Cache-Control",

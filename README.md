@@ -5,7 +5,7 @@ Website for TAMSMUN, a one-day high school Model UN conference hosted by the Tex
 ## Files
 
 - `index.html` is the whole site: styles, markup, and script in one file. No build step.
-- `hero.jpg` is the hero background photo (Denton County courthouse square).
+- `hero-campus.jpg` is the hero background photo (Denton County courthouse square).
 - `favicon.svg` is the browser tab icon.
 - `vercel.json` sets clean URLs and long-lived caching for the photo.
 
@@ -15,7 +15,7 @@ Open `index.html` and change the text directly. Near the bottom of the file ther
 
 ```js
 var CONFIG = {
-  heroImage: "",           // leave empty to use hero.jpg
+  heroImage: "",           // leave empty to use hero-campus.jpg
   contactEmail: "",        // the Secretariat's email address
   instagram: "",           // Instagram handle without the @
   secretaryGeneral: "",    // name that signs the letter
