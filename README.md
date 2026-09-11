@@ -1,6 +1,6 @@
 # TAMS Model United Nations
 
-Website for TAMSMUN, a one-day high school Model UN conference hosted by the Texas Academy of Mathematics and Science at the University of North Texas in Denton, Texas. Saturday, September 26, 2026, 8:00 AM to 6:00 PM.
+Website for TAMSMUN, a one-day high school Model UN conference hosted by the Texas Academy of Mathematics and Science at the University of North Texas in Denton, Texas. Saturday, October 10, 2026, 8:00 AM to 6:00 PM.
 
 ## Files
 

@@ -6,8 +6,8 @@
 <meta name="theme-color" content="#0B2A1D">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>TAMS Model United Nations</title>
-<meta name="description" content="TAMS Model United Nations. A one-day high school Model UN conference at the University of North Texas in Denton on Saturday, September 26, 2026.">
-<meta property="og:title" content="TAMS Model United Nations, September 26, 2026">
+<meta name="description" content="TAMS Model United Nations. A one-day high school Model UN conference at the University of North Texas in Denton on Saturday, October 10, 2026.">
+<meta property="og:title" content="TAMS Model United Nations, October 10, 2026">
 <meta property="og:description" content="A one-day high school Model UN conference at the University of North Texas in Denton. Four committees, 8:00 AM to 6:00 PM.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tamsmun.org/">
@@ -378,11 +378,11 @@
       </div>
       <div class="prose">
         <p class="salute">Dear delegates and advisors,</p>
-        <p>On behalf of the Secretariat, it is our pleasure to invite you to TAMS Model United Nations. On Saturday, September 26, the Texas Academy of Mathematics and Science will welcome high school delegates to the University of North Texas campus in Denton for a full day of debate, negotiation, and resolution writing.</p>
+        <p>On behalf of the Secretariat, it is our pleasure to invite you to TAMS Model United Nations. On Saturday, October 10, the Texas Academy of Mathematics and Science will welcome high school delegates to the University of North Texas campus in Denton for a full day of debate, negotiation, and resolution writing.</p>
         <p>TAMSMUN is deliberately compact. Four committees, one day, and a staff of student chairs who run the rooms, run crisis, and keep the day on schedule. That scale is the point. Smaller rooms mean more time on the speakers' list, more chances to build a bloc, and closer attention from your dais than a delegate can expect at a conference of two thousand.</p>
         <p>This session's agenda spans the range of what Model UN can be. The World Health Organization takes up the illicit trade in human organs. DISEC confronts weapons of mass destruction in the hands of non-state actors. The General Assembly debates censorship and mass surveillance in the digital age. And our crisis committee returns to 1991, where delegates will manage the final months of the Soviet Union from inside the room where it came apart.</p>
         <p>Whether this is your first conference or your fifteenth, we have built a committee for you. Background guides will follow once registration opens, and we will keep this page current as details are confirmed.</p>
-        <p>We look forward to seeing you in Denton this September.</p>
+        <p>We look forward to seeing you in Denton this October.</p>
         <div class="sig">
           <span class="name" id="sigName">Secretary General</span>
           <span class="role" id="sigRole">TAMS Model United Nations, Fall 2026</span>
@@ -483,7 +483,7 @@
         <div class="panel" data-reveal>
           <span class="status" id="regStatus">Opens soon</span>
           <h3>Delegates</h3>
-          <p>Open to all high school students and their advisors. When registration opens we'll post fees, deadlines, delegation size limits, and how to send us your committee preferences (plus country preferences for the GA-style committees).</p>
+          <p>Open to all high school students and their advisors. Register through the form below. You'll give us your committee preferences there, plus country preferences for the GA-style committees.</p>
           <a class="btn" id="regBtn" href="#registration" hidden>Register as a delegate</a>
         </div>
         <div class="panel" data-reveal>
@@ -531,7 +531,7 @@
         </details>
         <details name="faq">
           <summary><h3>How do I apply to chair?</h3><span class="mark" aria-hidden="true"></span></summary>
-          <div class="a">Anyone can apply. Chair applications aren't open yet. When they are, the form will be in the <a href="#registration">Registration section</a> above. Chairs come to training before the conference and help write their committee's background guide with the Secretariat.</div>
+          <div class="a">Anyone can apply. The chair application is in the <a href="#registration">Registration section</a> above. Chairs come to training before the conference and help write their committee's background guide with the Secretariat.</div>
         </details>
       </div>
     </div>
@@ -542,7 +542,7 @@
   <div class="wrap">
     <div>
       <a class="brand" href="#page">TAMSMUN</a>
-      <p class="date">Saturday, September 26, 2026</p>
+      <p class="date">Saturday, October 10, 2026</p>
       <address>Texas Academy of Mathematics and Science<br>University of North Texas<br>Denton, Texas</address>
       <p class="contact" id="contactLine" hidden></p>
     </div>
@@ -572,8 +572,8 @@
     contactEmail: "",        // the Secretariat's email address
     instagram: "",           // Instagram handle without the @
     secretaryGeneral: "",    // name that signs the letter
-    registrationUrl: "",     // delegate registration form link, once live
-    chairUrl: ""             // chair application form link, once live
+    registrationUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfgqKZeWleqTinuRdI2VsJBYaRxFDxkmL_gmRRsfotgVleurQ/viewform",
+    chairUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeCdo8BQ9D4qr7_x2YG8FjBLdrz07A_XUfEVE7pmO4eTv5Lhw/viewform"
   };
 
   (function () {
@@ -634,9 +634,9 @@
       $("footerReg").textContent = "Registration";
     }
 
-    // Countdown to doors opening, 8:00 AM Central, September 26, 2026
-    var start = Date.parse("2026-09-26T08:00:00-05:00");
-    var end = Date.parse("2026-09-26T18:00:00-05:00");
+    // Countdown to doors opening, 8:00 AM Central, October 10, 2026
+    var start = Date.parse("2026-10-10T08:00:00-05:00");
+    var end = Date.parse("2026-10-10T18:00:00-05:00");
     var cd = $("cd"), cdText = $("cdText");
     var el = { d: $("cdD"), h: $("cdH"), m: $("cdM"), s: $("cdS") };
     var done = false, described = false, lastTick = 0;
