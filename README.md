@@ -6,6 +6,7 @@ Website for TAMSMUN, a one-day high school Model UN conference hosted by the Tex
 
 - `index.html` is the whole site: styles, markup, and script in one file. No build step.
 - `hero-campus.jpg` is the hero background photo (UNT campus, looking toward the Hurley clock tower). If you swap it, give the new file a new name, because browsers cache the photo for a year.
+- `guides/` holds the delegate handbook and the four background guide PDFs. To update one, overwrite the file and push; the cards and the handbook card link to these by name.
 - `favicon.svg` is the browser tab icon.
 - `vercel.json` sets long-lived caching for the photo.
 
